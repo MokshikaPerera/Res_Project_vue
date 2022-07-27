@@ -88,28 +88,3 @@ export default {
 
 </script>
 
-<style>
-.logo{
-  width: 100px;
-}
-
-.register input{
-  width: 300px;
-  height: 40px;
-  padding-left: 20px;
-  display: block;
-  margin-bottom: 30px;
-  margin-right: auto;
-  margin-left: auto;
-  border: 1px solid green;
-}
-
-.register button{
-  width:320px;
-  height: 40px;
-  border: 1ox solid green;
-  background: rgb(143,188,143);
-  color:#fff;
-  cursor: pointer;
-}
-</style>
