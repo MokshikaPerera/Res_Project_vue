@@ -1,17 +1,14 @@
 <template>
 
-  <SignUp />
+ <router-view />
 </template>
 
 <script>
 
-import SignUp from './components/SignUp.vue'
 
 export default {
   name: 'App',
-  components:{
-    SignUp
-  }
+  
  
 }
 </script>
@@ -45,4 +42,16 @@ background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 
 /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
 }
+
+/* Default height for small devices */
+    #intro-example {
+      height: 400px;
+    }
+
+    /* Height for devices larger than 992px */
+    @media (min-width: 992px) {
+      #intro-example {
+        height: 600px;
+      }
+    }
 </style>
