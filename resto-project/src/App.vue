@@ -54,4 +54,7 @@ background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244
         height: 600px;
       }
     }
+
+  
+    
 </style>

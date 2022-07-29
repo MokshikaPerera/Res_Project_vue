@@ -3,20 +3,15 @@
 
 <section class="vh-100 bg-image"
   style="background-image: url('https://dbdzm869oupei.cloudfront.net/img/mantels/original/jpg/42682.jpg');">
-  
+    
     <div class="container h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-12 col-md-9 col-lg-7 col-xl-6">
           <div class="card" style="border-radius: 15px;">
             <div class="card-body p-5">
-              <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+              <h2 class="text-uppercase text-center mb-5">Login</h2>
 
               <form>
-
-                <div class="form-outline mb-4">
-                  <input type="text" id="form3Example1cg" v-model="name" class="form-control form-control-lg" />
-                  <label class="form-label" for="form3Example1cg">Your Name</label>
-                </div>
 
                 <div class="form-outline mb-4">
                   <input type="email" id="form3Example3cg" v-model="email" class="form-control form-control-lg" />
@@ -38,12 +33,12 @@
 
                 <div class="d-flex justify-content-center">
                   <button type="button"
-                  v-on:click="signUp"
-                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
+                  v-on:click="login"
+                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Login</button>
                 </div>
 
-                <p class="text-center text-muted mt-5 mb-0"><a href="/login"
-                    class="fw-bold text-body"><u>Login here</u></a>
+                <p class="text-center text-muted mt-5 mb-0"><a href="/sign-up"
+                    class="fw-bold text-body"><u>SignUp here</u></a>
                 </p>
 
               </form>
@@ -53,55 +48,41 @@
         </div>
       </div>
     </div>
-  
+ 
 </section>
 
-<Footer />
+<Footer/>
 
 </template>
+
 <script>
-import axios from 'axios'
 import Header from './Header.vue';
 import Footer from './Footer.vue';
-export default {
-    name : 'SignUp',
-    data(){
-      return{
-        name:'',
-        email:'',
-        password:''
-      }
+import axios from 'axios';
+export default{
+    name: "LoginPage",
+    components: { Header, Footer },
+    data() {
+        return {
+            email:'',
+            password:''
+        }
     },
 
-     components: {
-    Header,
-    Footer
-},
-    methods:{
-      async signUp(){
-        let result = await axios.post("http://localhost:3000/users",{
-          email:this.email,
-          password:this.password,
-          name:this.name
-        });
-
-        console.warn(result);
-        if(result.status==201)
+    methods: {
+        async login()
         {
-          localStorage.setItem("user-info",JSON.stringify(result.data))
+            let result = await axios.get(
+                `http://localhost:3000/users?email=${this.email}&password=${this.password}`
+            )
+
+            if(result.status==200 && result.data.length>0)
+        {
+          localStorage.setItem("user-info",JSON.stringify(result.data[0]))
           this.$router.push({name:'Home'})
         }
-      }
+            console.warn(result)
+        }
     },
-
-    // mounted()
-    // {
-    //   let user = localStorage.getItem('user-info');
-    //   if(user){
-    //     this.$router.push({name:'Home'})
-    //   }
-    // }
 }
-
 </script>
-
