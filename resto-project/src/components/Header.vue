@@ -16,13 +16,13 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <img src="https://png.pngtree.com/png-clipart/20220705/original/pngtree-restaurant-logo-png-image_8330101.png " style="width: 50px;"/>
           <li class="nav-item active">
-            <a style="color:black ; font-size: large;" class="nav-link" aria-current="page" href="/">Home</a>
+            <a style="color:black ; font-size: large;" class="nav-link" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a  style="color:black ; font-size: large;" class="nav-link" href="#">Add Restaurant</a>
+            <a  style="color:black ; font-size: large;" class="nav-link" href="#">Restaurant</a>
           </li>
           <li class="nav-item">
-            <a style="color:black ; font-size: large;" class="nav-link" href="#">Update Restaurant</a>
+            <a style="color:black ; font-size: large;" class="nav-link" href="#">Contact Us</a>
           </li>
           <li class="nav-item">
             <a v-on:click="logout" style="color:black ; font-size: large;" class="nav-link" href="#">Logout</a>
@@ -40,7 +40,7 @@ export default{
       logout()
       {
         localStorage.clear();
-        this.$router.push({name:'LoginPage'})
+        this.$router.push({name:'Login'})
       }
     },
 }

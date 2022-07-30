@@ -11,6 +11,30 @@
       "password": "shalu123",
       "name": "Shalinda",
       "id": 2
+    },
+    {
+      "email": "ddd",
+      "password": "ddddd",
+      "name": "ddd",
+      "id": 3
+    },
+    {
+      "email": "admin@gmail.com",
+      "password": "Admin123",
+      "name": "admin",
+      "id": 4
+    },
+    {
+      "email": "sss",
+      "password": "ssss",
+      "name": "zzss",
+      "id": 5
+    },
+    {
+      "email": "admin@gmail.com",
+      "password": "admin123",
+      "name": "Admin",
+      "id": 6
     }
   ]
 }

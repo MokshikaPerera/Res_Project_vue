@@ -17,15 +17,6 @@
    
   
 </div>
-
-
-      
-
-
-
-    
- 
- 
 </section>
 <Footer/>
 </template>
@@ -33,18 +24,17 @@
 <script>
 import Header from './Header.vue';
 import Footer from './Footer.vue';
-
 export default {
-    name: "HomePage",
+    name: "Home",
     data(){
       return{
         name:''
       }
     },
-    components: {
-    Header,
-    Footer
-},
+    components: { 
+      Header, 
+      Footer 
+    },
     
      mounted() {
         let user = localStorage.getItem("user-info");
@@ -61,4 +51,4 @@ export default {
    
    
 }
-</script>t>
+</script>

@@ -56,33 +56,40 @@
 </template>
 
 <script>
-import Header from './Header.vue';
+import axios from 'axios'
 import Footer from './Footer.vue';
-import axios from 'axios';
-export default{
-    name: "LoginPage",
-    components: { Header, Footer },
+import Header from './Header.vue';
+export default {
+    name: "Login",
     data() {
         return {
-            email:'',
-            password:''
-        }
+            email: "",
+            password: ""
+        };
     },
-
     methods: {
-        async login()
-        {
-            let result = await axios.get(
-                `http://localhost:3000/users?email=${this.email}&password=${this.password}`
-            )
+        async login() {
+            let result = await axios.get(`http://localhost:3000/users?email=${this.email}&password=${this.password}`);
+            console.warn(result);
+            console.warn(this.email, this.password);
+            if (result.status == 200 && result.data.length > 0) {
+                localStorage.setItem("user-info", JSON.stringify(result.data));
+                this.$router.push({ name: "Home" });
 
-            if(result.status==200 && result.data.length>0)
-        {
-          localStorage.setItem("user-info",JSON.stringify(result.data[0]))
-          this.$router.push({name:'Home'})
-        }
-            console.warn(result)
+                
+                if (this.email == "admin@gmail.com" && this.password == "admin123") {
+                    localStorage.setItem("user-info", JSON.stringify(result.data));
+                    this.$router.push({ name: "Dashboard" });
+                }
+            }
         }
     },
+    mounted() {
+        let user = localStorage.getItem("user-info");
+        if (user) {
+            this.$router.push({ name: "Home" });
+        }
+    },
+    components: { Footer, Header }
 }
 </script>
