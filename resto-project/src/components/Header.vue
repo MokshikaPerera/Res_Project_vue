@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #caced1;">
+    <nav class="navbar navbar-expand-lg navbar-light " style="background-color: white;">
     <div class="container-fluid">
       <button
         class="navbar-toggler"
@@ -14,17 +14,18 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarExample01">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <img src="https://png.pngtree.com/png-clipart/20220705/original/pngtree-restaurant-logo-png-image_8330101.png " style="width: 50px;"/>
           <li class="nav-item active">
-            <a class="nav-link" aria-current="page" href="/">Home</a>
+            <a style="color:black ; font-size: large;" class="nav-link" aria-current="page" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
+            <a  style="color:black ; font-size: large;" class="nav-link" href="#">Add Restaurant</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
+            <a style="color:black ; font-size: large;" class="nav-link" href="#">Update Restaurant</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a v-on:click="logout" style="color:black ; font-size: large;" class="nav-link" href="#">Logout</a>
           </li>
         </ul>
       </div>
@@ -34,6 +35,13 @@
 
   <script>
 export default{
-    name: 'HeaderPage'
+    name: 'HeaderPage',
+    methods: {
+      logout()
+      {
+        localStorage.clear();
+        this.$router.push({name:'LoginPage'})
+      }
+    },
 }
 </script>

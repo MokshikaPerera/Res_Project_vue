@@ -7,22 +7,10 @@
       "id": 1
     },
     {
-      "email": "sss",
-      "password": "sss",
-      "name": "sss",
+      "email": "shalinda@gmail.com",
+      "password": "shalu123",
+      "name": "Shalinda",
       "id": 2
-    },
-    {
-      "email": "",
-      "password": "",
-      "name": "",
-      "id": 3
-    },
-    {
-      "email": "",
-      "password": "",
-      "name": "",
-      "id": 4
     }
   ]
 }

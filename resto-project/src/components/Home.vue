@@ -8,7 +8,7 @@
   <h1 style="margin-left: 500px; margin-top: 100px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: black;">Homies Tasty</h1> <br>
   <h2 style="margin-left: 500px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
   ; color: rgb(112,128,144);">Nothing brings people together like good food.</h2><br>
-  <p style="margin-left: 500px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: large; " >Our offerings are flexible so you can customize
+  <p style="margin-left: 500px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 150%; " >Our offerings are flexible so you can customize
    them to your needs. Get started with your delivery people or connect with delivery 
    people through the Uber platform.Stand out with in-app marketing to reach even more 
    customers and increase sales.Turn customers into regulars with actionable data insights, 
